@@ -1,0 +1,11 @@
+.titulo{
+    font-style: italic;
+    color: aqua;
+    font-family: cursive;
+}
+.titulo:hover{
+    background: rebeccapurple;
+    color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+

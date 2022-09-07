@@ -1,23 +1,26 @@
+const peticion = new Worker('conponentes/template.js');
+let div = document.querySelector("#plantilla");
+
+peticion.postMessage({componente: "Myhtml", style: "caja", html: "caja"});
+peticion.postMessage({componente: "Mytitulo", style: "titulo", html: "titulo"});
+peticion.addEventListener("message", (e)=>{
+    switch (e.data.componente) {
+        case "Myhtml":
+            div.insertAdjacentHTML("beforeend", `
+                ${e.data.style}
+                ${e.data.html}
+            `);
+            break;
+        case "Mytitulo":
+            div.insertAdjacentHTML("beforeend", `
+                ${e.data.style}
+                ${e.data.html}
+            `);
+            break;
+        default:
+            console.log(e.data);
+            break;
+    }
+})
 
 
-let myStyle = {
-    width: "150px",
-    height: "150px",
-    background: "rebeccapurple",
-    color: "white",
-    "border-radius": "5px",
-    "font-family": "Arial, Helvetica, sans-serif",
-    "font-size": "1.5rem",
-    "text-decoration": "none"
-}
-function $(selector) {
-    return document.querySelector(`a[title='${selector}']`);
-}
-function Compañia(callback, selector) {
-    Object.assign(callback(selector).style, myStyle);
-}
-
-Compañia($,'PayPal');
-Compañia($,'SolarCity');
-Compañia($,'SpaceX');
-Compañia($,'Forbes');
