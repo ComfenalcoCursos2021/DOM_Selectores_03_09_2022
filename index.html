@@ -11,7 +11,16 @@
 </head>
 
 <body>
-    <div id="plantilla"></div>
+   
+    <form id="myFormulario" action="llegada.js">
+        <input type="text" name="nombre" value="Miguel" pattern="^[A-Za-z]+" title="Ingrese solo letras" required placeholder="Ingrese el nombre completo">
+        <input type="text" name="edad" value="23" pattern="^[0-9]+" required placeholder="Ingrese la edad">
+        <input type="text" name="dirrecion" value="Dirrecion defaul" required placeholder="Ingrese la dirrecion">
+        <textarea rows="4" name="mensaje" placeholder="Ingrese un mensaje" ></textarea>
+        <input type="submit" value="Guardar">
+    </form>
+
+    
     <script src="main.js"></script>
 </body>
 

@@ -1,0 +1,24 @@
+input,
+textarea{
+    display: block;
+    margin-bottom: 15px;
+}
+textarea{
+    resize: none;
+}
+textarea::-webkit-scrollbar {
+    width: .5rem;
+}  
+/* Track */
+textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+/* Handle */
+textarea::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+/* Handle on hover */
+textarea::-webkit-scrollbar-thumb:hover {
+    background: #555;
+   
+}
